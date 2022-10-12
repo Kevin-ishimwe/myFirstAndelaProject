@@ -1,0 +1,369 @@
+@import url('https://fonts.googleapis.com/css2?family=Great+Vibes&family=Playfair+Display:ital@1&display=swap');
+
+*{
+    margin: 0%;
+}
+.sidebar{
+    display: none;
+    top: 0%;
+    left: 0%;
+    z-index: 100;
+    backdrop-filter: blur(20px);
+    background-color: rgba(255, 255, 255, 0.037);
+    position: fixed;
+    width: 25vw;
+    height: 100vh;
+    transition: 2s ease;
+    animation: side .6s 1 ;
+}
+@keyframes side {
+    from{clip-path: polygon(0 0, 0 0, 0 100%, 0% 100%);}
+    to{clip-path: polygon(0 0, 100% 1%, 100% 100%, 0 100%);}
+    
+}
+.logo_container{
+    
+    padding: 2%;
+}
+
+.logo{
+    color: azure;
+    margin: 2% 5%;
+    font-family: sans-serif;
+    font-size: 80px;
+}
+.undi{
+    margin: -8% 5%;
+    font-size: 200%;
+    font-family: 'Great Vibes', cursive;
+    color: white;
+}
+.ul{
+    
+    margin: 0% 0% ;
+}
+.cross{
+    position: fixed;
+    right: 2%;
+    top: 2%;
+}
+.cross_horo{
+    position: fixed;
+    cursor: pointer;
+
+}
+
+
+.cross:hover{
+    cursor: pointer;
+}
+
+
+
+.side_li{
+    padding: 2% 0%;
+    margin: 2% 0%;
+    
+    list-style: none;
+}
+.side_a{
+    color: azure;
+font-size: 200%;
+text-decoration: none;
+font-family: sans-serif;
+transition:.4s ease-in-out;
+}
+.side_a:hover{
+    font-size: 250%;
+}
+.side_a:visited{
+    color: green;
+}
+
+.page{
+    padding: 1%;
+    display: grid;
+    justify-content: center;
+    position: fixed;
+    background: linear-gradient(30deg,rgba(0, 0, 0, 0.33),rgba(6, 0, 50, 0.609)) ,url('https://cdn5.vectorstock.com/i/1000x1000/88/29/sky-galaxy-stars-nebula-circle-vector-6228829.jpg') ;
+    width: 100vw;
+    height: 100vh;
+    z-index: -100;
+
+}
+.page_content{
+    display: grid;
+    
+    width: 85vw;
+    height: 99vh;
+    grid-template-columns: 45vw 45vw;
+}
+.lefty{
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+    backdrop-filter: blur(10px);
+    box-shadow: -.3px 0px 10px rgb(255, 12, 178);
+    z-index: 0;
+    background-color: rgba(255, 255, 255, 0.037);
+    height: 90vh;
+}
+#bg{
+    
+    width: 39vw;
+    height: 90vh;
+   
+
+}
+
+.inner_content{
+   
+    padding: 2% 5% 4%;
+    
+}
+#q{
+    font-size: 150% ;
+    color: azure;
+}
+#qod{
+    color: azure;
+    font-size: large;
+
+    height: 40vh;
+    overflow-y: ellipsis;
+    line-height: -50px;
+   font-style: italic;
+    font-family: 'Playfair Display';
+    margin: 0% 0% 5%;
+    
+    
+}
+#author{
+    color: white;
+    font-size: larger;
+    line-height: -50px;
+   
+    font-family: 'Playfair Display';
+    margin: 0% 0% 5%;
+    
+
+}
+label{
+    margin: 5% 0% 0%;
+    padding: 1%;
+    display: block;
+    color: azure;
+    width: fit-content;
+    text-shadow: 0px 0px 10px white;
+    font-size: xx-large;
+
+}
+.date{
+    border: 2px  solid black;
+
+}
+
+.blur{
+    position: absolute;
+    z-index: 30;
+    top: 20vh;
+    backdrop-filter: blur(10px);
+    width: 28.9vw;
+    padding: 4% 5% 5%;
+  
+    background-color: rgba(255, 255, 255, 0.156);
+}
+#righty_text{
+    font-size: 300%;
+    color: white;
+}
+#big{
+  
+    position: absolute;
+    margin: 1% 2%;
+    font-size: 140%;
+    font-family: sans-serif;
+    transform: rotate(15deg);
+    transition: .7s;
+
+}
+.blur:hover #big{
+    
+    transform: rotate(0deg);
+    font-size: 90%;
+
+}
+
+.menu{
+
+    padding: 1% 4% 0%;
+        
+} 
+.menu:hover{
+    cursor: pointer;
+}
+.heading{
+    text-align: left;
+    font-family: sans-serif;
+    color: rgb(255, 12, 178);
+    text-shadow: 5px 2px 12px rgb(203, 6, 147); ;
+    font-size: xx-large;
+    padding: .5%;
+    transition: .5s ease-in-out;
+   
+    
+}
+.heading:hover{
+    scale: 1.1;
+    margin: 0% 5%;
+}
+
+.today{
+    color: azure;
+   position: absolute;
+    background:linear-gradient(90deg,rgba(196, 16, 94, 0.12),rgba(0, 0, 255, 0.129));
+    padding: 2% ;
+    bottom: 0%;
+    right: 0%;
+    
+}
+.now{
+    color: azure;
+    position: absolute;
+     background:linear-gradient(90deg,rgba(196, 16, 94, 0.12),rgba(0, 0, 255, 0.129));
+     padding: 1% ;
+     bottom: 0%;
+     right: 0%;
+     
+
+}
+#date{
+    text-align: center;
+    font-size: 100%;
+    color: rgb(249, 171, 210);
+    background-color: inherit;
+    padding: 2%;
+    border: solid rgb(203, 6, 147);;
+    border-radius: 5px;
+    font-style: italic;
+    font-family: sans-serif;
+    font-weight: 100;
+}
+.submit{
+
+    bottom: 10%;
+    margin: 0% 2vw;
+    background-color: rgb(203, 6, 147);
+    box-shadow: 0px 0px 20px rgb(255, 12, 178),2px .4px 4px white;
+    border: none;
+    padding: 1.5% 3%;
+    color:azure;
+    text-shadow: 1px 1px 2px black;
+    border-radius: 10px;
+    font-size: larger;
+    transition: .7s;
+
+}
+.submit:hover{
+    cursor:pointer;
+    scale: 1.1;
+    
+}
+
+
+
+
+
+
+
+
+
+
+
+.footer{
+    position: fixed;
+    bottom: 0%;
+    backdrop-filter: blur(15px);
+   
+    display: grid;
+    justify-content: center;
+    width: 84vw;
+}
+.footer_text{
+    color: white;
+    font-size: larger;
+}
+.righty{
+    z-index: 10;
+}
+/* horoscope answer */
+.yourHoroscope{
+    display: none;
+    position: fixed;
+    background-color: rgba(0, 0, 0, 0.472);
+    backdrop-filter: blur(5px);
+    z-index: 150;
+    width: 100vw;
+    height: 100vh;
+    animation: appear 1s 1;
+}
+@keyframes appear {
+    from{clip-path: polygon(38% 30%, 57% 30%, 57% 48%, 47% 48%, 46% 48%, 38% 48%);;}
+    to{clip-path: polygon(0 0, 100% 0, 100% 86%, 100% 100%, 55% 100%, 0 100%);}
+    
+}
+.horoscope_container{
+    
+    background:linear-gradient(90deg,rgba(2, 32, 30, 0.582),rgba(0, 0, 0, 0.759),rgba(182, 8, 83, 0.4) )    ,url("https://askastrology.com/wp-content/uploads/2020/07/cancer_astrology_sign.jpg");
+    width: 55vw;
+
+    background-size: cover;
+    background-repeat: no-repeat;
+    min-height: 30vw;
+    padding: 2%;
+    margin: 5% auto;
+    animation: appear 1s 1;
+
+
+}
+.zodiac{
+    color: azure;
+    padding: 2%;
+    font-size: 300%;
+    text-align: center;
+}
+.horoscope{
+    color: azure;
+    backdrop-filter: blur(2px);
+ 
+    padding: 2%;
+
+    text-align: center;
+    font-size: 150%;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media screen and (max-width:750px) {
+    .righty{
+        display: none;
+    }
+    .lefty{
+        width: 80vw;
+    }
+    .sidebar{
+        width: 50vw;
+    }
+    
+}
