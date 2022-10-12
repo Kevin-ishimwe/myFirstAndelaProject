@@ -76,9 +76,7 @@ transition:.4s ease-in-out;
 .side_a:hover{
     font-size: 250%;
 }
-.side_a:visited{
-    color: green;
-}
+
 
 .page{
     padding: 1%;
