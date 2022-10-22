@@ -1,0 +1,72 @@
+.login_page{
+    display: grid;
+
+ 
+    margin: 0% auto;
+    height: 90vh;
+    border-radius: 20px;
+    width: 40vw;
+    box-shadow: 0px 0px 40px black;
+    backdrop-filter: blur(20px);
+    background-color: rgba(255, 255, 255, 0.078);
+}
+.head_login{
+    font-size: xx-large;
+    margin: 0% ;
+    text-align: center;
+    color: rgb(255, 12, 178);
+    text-shadow: 5px 2px 12px rgb(203, 6, 147); ;
+    font-size: 300%;
+
+}
+.login_inputs{
+    
+   padding: 10% 5%;
+    width: 30vw;
+    height: 50vh;
+
+    margin: 0% auto 10%;
+}
+.inputs{
+    width: 25vw;
+    border-radius: 20px;
+    margin: 4% auto;
+    color: azure;
+    padding: 1% 3%;
+    border: solid rgb(255, 6, 176);;
+    box-shadow: 0px 0px 4px rgb(255, 12, 178);
+  
+    font-size: x-large;
+    background-color: inherit;
+}
+.login_btn{
+    display: block;
+    justify-content: center;
+    margin: 5% auto;
+    background-color: rgb(203, 6, 147);
+    box-shadow: 0px 0px 20px rgb(255, 12, 178),2px .4px 4px white;
+    border: none;
+    padding: 2% 3%;
+    color:azure;
+    width: 10vw;
+    text-shadow: 1px 1px 2px black;
+    border-radius: 10px;
+    font-size: x-large;
+    transition: .7s;
+}
+.login_btn:hover{
+    cursor:pointer;
+    scale: 1.1;
+    
+}
+#highlight{
+    font-size: larger;
+    background-color: rgba(240, 255, 255, 0.176);
+}
+.forgot{
+    margin: 10% 0%;
+    font-size: larger;
+   
+    color: white;
+    text-decoration: none;
+}

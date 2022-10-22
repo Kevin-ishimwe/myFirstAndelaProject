@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Andela exam</title>
+    <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="main.css">
+
+</head>
+<body>
+    <div class="page">
+<div class="login_page">
+    <h1 class="head_login" style="margin: 5vh 0%;">CREATE ACCOUNT</h1>
+    <form action="" class="login_inputs">
+        <input type="email" class="inputs" id="add_email" placeholder="email" autofocus required="true" >
+        <input type="password" class="inputs" id="add_password"  placeholder="password" required >
+        <input type="password" class="inputs" id="confirm_password"  placeholder="Confirm password" required >
+        <button class="login_btn" id="signup">sign up</button>
+        <a class="forgot" href="/login"> have an account <span id="highlight">login</span></a>
+    </form>
+
+</div>
+    </div>
+
+    <script>
+
+       document.getElementById("signup").onclick= async (e)=>{
+            e.preventDefault()
+            if(document.getElementById('add_email').value!=""&&document.getElementById('add_password').value!=""&&document.getElementById('confirm_password').value!=""){
+                if(document.getElementById('add_password').value!==document.getElementById('confirm_password').value){
+                alert("make sure the password and confirm password are the same")
+            }
+            else{
+                  //adding a user to my database and redirecting
+                await fetch("http://localhost:1500/add-user",{
+                method:"POST",
+                headers:{'Content-type': 'application/json'},
+                body:JSON.stringify({
+                    email:document.getElementById('add_email').value,
+                    password:document.getElementById('add_password').value
+
+                })
+                
+            } ).then(()=>{
+                console.log("post request sent")
+                window.location="login"
+            })
+
+
+            }
+
+            }
+
+            else{
+                alert("fill out the form")
+            }
+    
+          
+           
+        }
+
+    </script>
+</body>
+</html>

@@ -1,10 +1,22 @@
+require('dotenv').config()
 const express =require('express')
 const app = express()
-app.listen(1500,()=>{
-    console.log("custom server running")
+const mongoose =require('mongoose')
+const router =require('./routes/authRoutes')
+//connecting to a dbs
+mongoose.connect(process.env.DB_LINK).then(()=>{
+    app.listen(process.env.PORT,()=>{
+        
+        console.log(" server running,conected to database ")
+    })
 })
-app.use(express.static('./public'))
-app.get('/',(req,res)=>{
-    res.sendFile("./views/index.html",{root:__dirname})
+//midleware test
+app.use(router)
 
-})
+
+//routes for pages 
+app.use(express.static('./public'))
+
+//endpoints to handle auth_pracytice
+
+//user validation and JWT
