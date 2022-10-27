@@ -7,11 +7,41 @@
     <title>Andela exam</title>
     <link rel="stylesheet" href="index.css">
     <link rel="stylesheet" href="main.css">
+    
 
 </head>
 <body>
     <div class="page">
+        <div class="sidebar">
+            <div class="cross">
+                <svg viewBox="0 0 100 100" width="40" height="40">
+                    <rect width="80" height="10" x="-30" y="60" fill="white" style="transform: rotate(-40deg);" id="cross_1"></rect>
+                    <rect width="80" height="10" x="25" fill="white" style="transform: rotate(40deg);" y="0" id="cross_2"></rect>
+
+                </svg>
+            </div>
+            <div class="logo_container">
+                <h1 class="logo">KS</h1>
+            <h3 class="undi">kevo scope</h3>
+            </div>
+            <div class="links">
+                <ul class="ul">
+                    <li class="side_li"><a class="side_a" href="/">Home</a></li>
+                    <li class="side_li"><a class="side_a" href="/login">Login </a></li>
+                    <li class="side_li"><a class="side_a" href="https://my-public-portfolio101.netlify.app/" target="_blank"> portfolio</a></li>
+                    <li class="side_li"><a class="side_a" href="tel:0787882105">Contact Us </a></li>
+                </ul>
+            </div>
+            </div>
 <div class="login_page">
+    <div class="menu" >
+        <svg viewBox="0 0 100 80"  width="35" height="40">
+            <rect width="90" height="10" fill="white"  ></rect>
+            <rect y="30" width="60" height="10" fill="white"></rect>
+            <rect y="60" width="90" height="10" fill="white"></rect>
+          </svg>
+          </div>
+    
     <h1 class="head_login" style="margin: 5vh 0%;">CREATE ACCOUNT</h1>
     <form action="" class="login_inputs">
         <input type="email" class="inputs" id="add_email" placeholder="email" autofocus required="true" >
@@ -25,6 +55,15 @@
     </div>
 
     <script>
+        
+        document.querySelector(".menu").onclick=()=>{
+            document.querySelector(".sidebar").style.display="grid"
+        }
+       document.querySelector(".cross").onclick=()=>{
+        document.querySelector(".sidebar").style.display="none"
+       }
+
+
 
        document.getElementById("signup").onclick= async (e)=>{
             e.preventDefault()
@@ -33,8 +72,15 @@
                 alert("make sure the password and confirm password are the same")
             }
             else{
-                  //adding a user to my database and redirecting
-                await fetch("http://localhost:1500/add-user",{
+                
+              try{
+                document.getElementById("signup").style.backgroundColor="red"
+                document.getElementById("signup").textContent="Loading...."
+
+                    //adding a user to my database and redirecting
+                setTimeout(()=>{
+                    
+                     fetch("http://localhost:1500/add-user",{
                 method:"POST",
                 headers:{'Content-type': 'application/json'},
                 body:JSON.stringify({
@@ -49,6 +95,13 @@
             })
 
 
+
+                },1000)
+              }
+              catch(err){
+                console.log(err)
+
+              }
             }
 
             }
@@ -61,6 +114,52 @@
            
         }
 
+
+        //side interview exercises
+
+    
+    //     var objobj=[
+    //         {
+    //             name:"kevin",
+    //             age:"21",
+    //             mobile:[
+    //                 "078887004","0787346579"
+    //             ]
+    //         },{
+    //             name:"kelly",
+    //             age:"17",
+    //             mobile:[
+    //                 "078887004","0787346579"
+    //             ]
+    //         },{
+    //             name:"ariela",
+    //             age:"12",
+    //             mobile:[
+    //                 "+128653908936","none"
+    //             ]
+    //         },{
+    //             name:"victor",
+    //             age:"9",
+    //             mobile:[
+    //                 "+23467328235","none"
+    //             ]
+    //         }
+    //     ]
+    //    objobj.forEach((item)=>{
+    //     console.log(item)
+    //    })
+    //    var nums =[1,2,3,5,7,9]
+    //    var spreadMe=[...objobj,...nums]
+    //    console.log(spreadMe)
+
+    //    var age =2
+    //    age>18?console.log("you are fully grown "):console.log("if people were notes you'd be A minor")
+       
+   
+
+
+
+    
     </script>
 </body>
 </html>

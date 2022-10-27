@@ -1,9 +1,8 @@
 .login_page{
     display: grid;
-
- 
+    justify-content: center;
     margin: 0% auto;
-    height: 90vh;
+    height: 95vh;
     border-radius: 20px;
     width: 40vw;
     box-shadow: 0px 0px 40px black;
@@ -20,15 +19,15 @@
 
 }
 .login_inputs{
-    
-   padding: 10% 5%;
+  
+   padding: 0% 5%;
     width: 30vw;
     height: 50vh;
 
     margin: 0% auto 10%;
 }
 .inputs{
-    width: 25vw;
+    width: 30vw;
     border-radius: 20px;
     margin: 4% auto;
     color: azure;
@@ -69,4 +68,21 @@
    
     color: white;
     text-decoration: none;
+}
+@media screen and (max-width:800px) {
+    .login_inputs{
+        width:80vw;
+        display: grid;
+        justify-content: center;
+
+    }
+    .login_page{
+        width: 90vw;
+    }
+    .inputs{
+        width: 60vw;
+    }
+    .login_btn{
+        width: 30vw;
+    }
 }
