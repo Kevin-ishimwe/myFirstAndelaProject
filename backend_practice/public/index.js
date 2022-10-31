@@ -9,7 +9,12 @@ const author =document.getElementById("author")
 //geting the quote and current
 async function getQuote(){
   
-    let quote = await fetch('https://goquotes-api.herokuapp.com/api/v1/random?count=2').then((res)=>{
+    let quote = await fetch('https://goquotes-api.herokuapp.com/api/v1/random?count=2',{
+      mode:"cors",
+      headers:{
+         'Access-Control-Allow-Origin':'https://goquotes-api.herokuapp.com/api/v1/random?count=2'
+      }
+    }).then((res)=>{
    
         return res.json()}).then((data)=>{
               author.innerText =data.quotes[0].author

@@ -28,6 +28,11 @@ router.post('/add-user',appControllers.new_user)
 
 
 
+//route protection
+router.get('/me_dashboard',appControllers.me_dashboard)
+
+
+
 
 
 module.exports=router

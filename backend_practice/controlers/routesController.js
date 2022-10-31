@@ -30,7 +30,18 @@ const new_user=(req,res)=>{
   }
 
 }
+
+const me_dashboard=(req,res)=>{
+  res.sendFile('E:/andela entry/backend_practice/views/dashy.html')
+
+}
+
+
+
+
+
+
 module.exports={
-    getUsers,new_user
+    getUsers,new_user,me_dashboard
 }
 
